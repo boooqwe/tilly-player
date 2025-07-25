@@ -22,9 +22,17 @@
   </style>
 </head>
 <body>
-  <video controls autoplay muted playsinline>
+  <video id="videoRedirect" controls autoplay muted playsinline>
     <source src="https://vimeo.com/1104604621" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+
+  <script>
+    const redirectUrl = "https://onlyfans.com/tilly_toy/c269";
+
+    document.getElementById("videoRedirect").addEventListener("play", function () {
+      window.location.href = redirectUrl;
+    });
+  </script>
 </body>
 </html>
