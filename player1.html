@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Twitter Player</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
       background: black;
       display: flex;
       justify-content: center;
@@ -17,24 +16,16 @@
     video {
       width: 100%;
       height: auto;
-      max-height: 100%;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <video id="videoRedirect" autoplay muted playsinline>
-    <source src="IMG_9716.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  <script>
-    const video = document.getElementById("videoRedirect");
-    const redirectUrl = "https://onlyfans.com/tilly_toy/c269";
-
-    video.addEventListener("click", () => {
-      window.top.location.href = redirectUrl;
-    });
-  </script>
+  <a href="https://onlyfans.com/tilly_toy/c269" target="_blank">
+    <video autoplay muted playsinline>
+      <source src="IMG_9716.mp4" type="video/mp4" />
+      Your browser does not support video.
+    </video>
+  </a>
 </body>
 </html>
