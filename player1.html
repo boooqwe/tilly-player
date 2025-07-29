@@ -1,8 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Video Player</title>
-  </head>
-  <body style="margin: 0; background: black;">
-    <video controls muted autoplay> <source src="<video controls muted autoplay> <source src="teaser.mp4" type="video/mp4"> </video> <div style="text-align: center; margin-top: 20px;"> <button onclick="redirectToSite()">View Full Content</button> </div>" type="video/mp4"> </video> <div style="text-align: center; margin-top: 20px;"> <button onclick="redirectToSite()">View Full Content</button> </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Watch this video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    video {
+      width: 100%;
+      max-height: 80vh;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <video controls autoplay muted playsinline>
+    <source src="https://boooqwe.github.io/tilly-player/IMG_9716.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div>
+    <button onclick="redirectToSite()">View Full Content</button>
+  </div>
+
+  <script>
+    function redirectToSite() {
+      window.open("https://onlyfans.com/tilly_toy/c269", "_blank");
+    }
+  </script>
+
+</body>
+</html>
