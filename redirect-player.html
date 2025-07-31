@@ -16,6 +16,7 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
+      display: block; /* Ensure no margin issues */
     }
 
     .overlay {
@@ -26,21 +27,38 @@
       height: 100vh;
       z-index: 10;
       cursor: pointer;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      display: none; /* Hidden by default */
+    }
+
+    /* Show overlay after video plays for a few seconds */
+    .show-overlay {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted playsinline loop>
+  <video id="myVideo" autoplay muted playsinline loop>
     <source src="https://boooqwe.github.io/tilly-player/IMG_9716.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <div class="overlay" onclick="window.top.location.href='https://onlyfans.com/tilly_toy/c269'"></div>
+  <div id="overlay" class="overlay" onclick="window.top.location.href='https://onlyfans.com/tilly_toy/c269'"></div>
 
   <script>
-    const video = document.querySelector('video');
+    const video = document.getElementById('myVideo');
+    const overlay = document.getElementById('overlay');
+
+    // Try to play the video
     video.play().catch(() => {
       video.controls = true; // Show controls if autoplay is blocked
+    });
+
+    // Show overlay after 5 seconds of video playback
+    video.addEventListener('playing', () => {
+      setTimeout(() => {
+        overlay.classList.add('show-overlay');
+      }, 3000); // 5000ms = 5 seconds
     });
   </script>
 </body>
