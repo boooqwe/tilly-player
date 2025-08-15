@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Video Player</title>
-</head>
-<body style="margin: 0; background: black;">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      video {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted playsinline controls id="videoRedirect">
+      <source src="https://boooqwe.github.io/tilly-player/IMG_9716.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Option 1: Show video first -->
-  <video autoplay muted loop playsinline width="100%" height="100%">
-    <source src="YOUR_VIDEO_URL" type="video/mp4">
-  </video>
+    <script>
+      const redirectUrl = "https://onlyfans.com/tilly_toy/c269";
+      const video = document.getElementById("videoRedirect");
 
-  <!-- Option 2: Immediate redirect -->
-  <script>
-    // Redirect after 3 seconds
-    setTimeout(() => {
-      window.location.href = 'https://onlyfans.com/tilly_toy/c269';
-    }, 3000);
-  </script>
-
-</body>
+      video.addEventListener("click", () => {
+        window.open(redirectUrl, "_blank");
+      });
+    </script>
+  </body>
 </html>
