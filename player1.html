@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Video Player</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin: 0; background: black;">
-  <!-- Embedded tweet with your video -->
-  <blockquote class="twitter-tweet" data-media-max-width="560">
-    <p lang="zxx" dir="ltr">
-      <a href="https://t.co/1Fg44ySC8w">pic.twitter.com/1Fg44ySC8w</a>
-    </p>&mdash; boooooo (@boooooooqwe) 
-    <a href="https://twitter.com/boooooooqwe/status/1957351588432855192?ref_src=twsrc%5Etfw">August 18, 2025</a>
-  </blockquote>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      video {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted playsinline controls id="videoRedirect">
+      <source src="https://boooqwe.github.io/tilly-player/IMG_9716.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+      const redirectUrl = "https://onlyfans.com/tilly_toy/c269";
+      const video = document.getElementById("videoRedirect");
 
-  <!-- Optional redirect -->
-  <script>
-    setTimeout(() => {
-      window.location.href = "https://onlyfans.com/tilly_toy/c269";
-    }, 4000);
-  </script>
-</body>
+      video.addEventListener("click", () => {
+        window.open(redirectUrl, "_blank");
+      });
+    </script>
+  </body>
 </html>
